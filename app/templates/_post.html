@@ -1,0 +1,15 @@
+<table class="table table-hover">
+        <tr>
+            <td>
+            {% set user_link %}
+            <a href="{{ url_for('main.user', username=post.author.username) }}">{{ post.author.username }}</a>
+            {% endset %}
+            {{ user_link }} ({{ moment(post.eventdate).fromNow() }}) - {{post.category}}: {{ post.body }}
+            {% if post.author.username == current_user.username %}
+
+
+                 <a href="{{ url_for('main.deletenote', id=post.id) }}">delete</a>
+            {% endif %}
+            </td>
+        </tr>
+    </table>
