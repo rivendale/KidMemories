@@ -19,5 +19,3 @@ class Config(object):
     MAIL_PASSWORD = os.environ.get('MAIL_PASSWORD')
     ADMINS = ['nickryg@gmail.com']
     POSTS_PER_PAGE = 25
-    # API keys
-    # sample: TRADIERKEY = "Bearer 5dTmm3tGzaKk3oYWwwqPbsBAg3mt"
